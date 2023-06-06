@@ -1,4 +1,4 @@
-project(tests)
+project(unit_tests)
 
 # 'lib' is the folder with Google Test sources
 add_subdirectory(lib)
