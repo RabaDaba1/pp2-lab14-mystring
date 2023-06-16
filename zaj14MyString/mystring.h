@@ -10,7 +10,7 @@
 #include <set>
 #include <map>
 #include <functional>
-
+#include <sstream>
 
 class MyString {
 public:
@@ -32,7 +32,7 @@ public:
     bool startsWith(const char *text) const;
     bool endsWith(const char *text) const;
 
-    bool all_of(std::function<bool(char)> predicate) const;
+    bool all_of(const std::function<bool(char)>& predicate) const;
 
     MyString join(const std::vector<MyString> &texts) const;
 
@@ -44,7 +44,7 @@ public:
 
     std::map<MyString, size_t> countWordsUsageIgnoringCases() const;
 
-    auto getPosition() const;
+    auto getPosition(size_t pos) const;
 
     static MyString generateRandomWord(size_t length);
 
@@ -52,9 +52,10 @@ public:
 
     struct iterator
     {
-        char *c {};
+        char *c_str_begin {};
+        size_t position {};
+        std::string::iterator str_iterator;
 
-        iterator() =default;
 
         explicit iterator(MyString* myString, size_t position);
 
@@ -67,14 +68,16 @@ public:
         bool operator==(iterator anotherIt);
         bool operator!=(iterator &other);
 
-        char& operator*();
+        char& operator*() const;
     };
 
     struct const_iterator
     {
-        const char *c {};
+        char const *c {};
+        char const *c_str_begin {};
+        size_t position {};
 
-        const_iterator() =default;
+        std::string::const_iterator str_iterator;
 
         explicit const_iterator(const MyString* myString, size_t position);
 
@@ -90,14 +93,14 @@ public:
         char operator*() const;
     };
 
-    iterator begin() { return {}; }
-    const_iterator begin() const { return {}; }
+    iterator begin() { return iterator(this, 0); }
+    const_iterator begin() const { return const_iterator(this, 0); }
 
-    iterator end() { return {}; };
-    const_iterator end() const { return {}; }
+    iterator end() { return iterator(this , size_); }
+    const_iterator end() const { return const_iterator(this, size_); }
 
-    const_iterator cbegin() const { return {}; }
-    const_iterator cend() const { return {}; }
+//    const_iterator cbegin() const { return {}; }
+//    const_iterator cend() const { return {}; }
 
     char operator[](size_t i) const;
 
@@ -109,9 +112,17 @@ public:
     bool operator<(const MyString& rhs) const;
 
     friend std::ostream& operator<<(std::ostream& os, const MyString& obj);
-    friend std::istream& operator>>(std::istream& is, const MyString& obj);
+    friend std::istringstream& operator>>(std::istringstream& is, MyString& obj);
+
 
     explicit operator std::string() const;
+protected:
+    std::string toString() const {
+        return std::string(buffer_) + text_;
+    }
+
+    void setText(char const *newText);
+    void setText(const std::string& newText);
 
 private:
     char buffer_[initialBufferSize_] {};

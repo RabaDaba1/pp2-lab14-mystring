@@ -5,26 +5,19 @@
 #include "mystring.h"
 
 #include <cstring>
+#include <sstream>
+#include <random>
 
 using namespace std;
 
 /** CONSTRUCTORS **/
 MyString::MyString(const char *text) {
-    size_t text_size = strlen(text);
-
-    strncpy(buffer_, text, initialBufferSize_-1);
-
-    if (text_size >= initialBufferSize_)
-        text_.assign(text+initialBufferSize_-1);
-
-    size_ = text_size;
+    setText(text);
 }
 
 MyString::MyString(const MyString &text) {
     strcpy(buffer_, text.buffer_);
-
-    if (text.size_ >= initialBufferSize_)
-        text_ = text.text_;
+    text_ = text.text_;
 
     size_ = text.size_;
 }
@@ -37,68 +30,117 @@ void MyString::clear() {
 }
 
 void MyString::push_back(char c) {
-
+    *(end()) = c;
 }
 
 bool MyString::startsWith(const char *text) const {
-    return false;
+    return toString().find(text) == 0;
 }
 
 bool MyString::endsWith(const char *text) const {
-    return false;
+    return toString().find(text) == size_- strlen(text);
 }
 
-
-bool MyString::all_of(std::function<bool(char)> predicate) const {
-    return false;
+bool MyString::all_of(const std::function<bool(char)>& predicate) const {
+    string text = toString();
+    return std::all_of(text.begin(), text.end(), predicate);
 }
 
 MyString MyString::join(const vector<MyString> &texts) const {
-    return *this;
+    string joinedText;
+    string currentText = toString();
+
+    for (const auto &text: texts)
+        joinedText += (text.toString() + currentText);
+
+    return {joinedText.substr(0, joinedText.size()-currentText.size()).c_str()};
 }
 
-MyString &MyString::toLower() {
+MyString& MyString::toLower() {
+    std::transform(begin(), end(), begin(),
+                   [](unsigned char c){ return std::tolower(c); });
+
     return *this;
 }
 
 MyString& MyString::trim() {
+    string text = toString();
+
+    text.erase(0, text.find_first_not_of(" \n\r\t"));
+    text.erase(text.find_last_not_of(" \n\r\t") + 1);
+
+    setText(text);
+
     return *this;
 }
 
 std::set<MyString> MyString::getUniqueWords() const {
-    return {};
+    set<MyString> result;
+    istringstream ss(toString());
+
+    string buff;
+    while (getline(ss, buff, ' '))
+        result.insert(MyString(buff.c_str()));
+
+    return result;
 }
 
 std::map<MyString, size_t> MyString::countWordsUsageIgnoringCases() const {
-    return {};
+    std::map<MyString, size_t> result;
+    std::istringstream ss(toString());
+
+    string buff;
+    while (getline(ss, buff, ' ')) {
+        MyString word(buff.c_str());
+        result[word.toLower()]++;
+    }
+
+    return result;
 }
 
-auto MyString::getPosition() const {
-    return 0;
+auto MyString::getPosition(size_t pos) const {
+
 }
 
+static const char AlphaNumeric[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                   "abcdefghijklmnopqrstuvwxyz";
+int MyLen = sizeof(AlphaNumeric) - 1;
+char randomChar() { return AlphaNumeric[rand() % MyLen]; }
 MyString MyString::generateRandomWord(size_t length) {
-    return MyString("Elo");
+    string random_str {};
+    for(int m = 0; m < length; m++)
+        random_str.push_back(randomChar());
+
+    return {random_str.c_str()};
 }
 
 /** OVERLOADED OPERATORS **/
-MyString &MyString::operator+=(const char &text) {
+MyString& MyString::operator+=(const char &text) {
+    if (size_ >= initialBufferSize_-1)
+        text_.push_back(text);
+    else
+        buffer_[size_] = text;
+
+    size_++;
     return *this;
 }
 
 bool MyString::operator==(const MyString &rhs) const {
-    return false;
+    return toString() == rhs.toString() && size_ == rhs.size_;
 }
 
 bool MyString::operator!=(const MyString &rhs) const {
-    return false;
+    return !(*this == rhs);
 }
 
 char MyString::operator[](size_t i) const {
-    if (i < MyString::initialBufferSize_)
+    if (i >= size_)
+        throw std::out_of_range("");
+
+    if (i < MyString::initialBufferSize_-1)
         return buffer_[i];
     else
-        return text_[i-MyString::initialBufferSize_];
+        return text_[i-MyString::initialBufferSize_+1];
 }
 
 bool MyString::operator<(const MyString &rhs) const {
@@ -110,77 +152,110 @@ std::ostream& operator<<(std::ostream& os, const MyString& obj) {
     return os;
 }
 
-std::istream& operator>>(std::istream& is, const MyString& obj) {
+std::istringstream& operator>>(std::istringstream &is, MyString& obj) {
+    string buff = is.str();
+
+    obj.setText(buff);
+
     return is;
 }
 
 MyString::operator std::string() const {
-    return string(buffer_) + text_;
+    return toString();
 }
 
+void MyString::setText(char const *newText) {
+    size_t text_size = strlen(newText);
+
+    strncpy(buffer_, newText, initialBufferSize_-1);
+
+    if (text_size >= initialBufferSize_)
+        text_.assign(newText+initialBufferSize_-1);
+
+    size_ = text_size;
+}
+
+void MyString::setText(const std::string& newText) {
+    setText(newText.c_str());
+}
 
 /** ITERATOR **/
-MyString::iterator::iterator(MyString *myString, size_t position) {
+MyString::iterator::iterator(MyString *myString, size_t pos) {
+    c_str_begin = myString->buffer_;
+    str_iterator = myString->text_.begin();
 
+    position = pos;
 }
 
 MyString::iterator MyString::iterator::operator+(size_t pos) {
-    return *this;
+    MyString::iterator newIterator = *this;
+    newIterator.position += pos;
+
+    return newIterator;
 }
 
 size_t MyString::iterator::operator-(MyString::iterator anotherIt) {
-    return 0;
+    return position - anotherIt.position;
 }
 
 MyString::iterator &MyString::iterator::operator++() {
+    position++;
     return *this;
 }
 
 MyString::iterator &MyString::iterator::operator--() {
+    position--;
     return *this;
 }
 
 bool MyString::iterator::operator==(MyString::iterator anotherIt) {
-    return false;
+    return position== anotherIt.position && string(c_str_begin) == string(anotherIt.c_str_begin) && str_iterator == anotherIt.str_iterator;
 }
 
 bool MyString::iterator::operator!=(MyString::iterator &other) {
-    return false;
+    return !(*this == other);
 }
 
-char &MyString::iterator::operator*() {
-    return reinterpret_cast<char &>(c);
+char &MyString::iterator::operator*() const {
+    return position < initialBufferSize_-1 ? *(c_str_begin + position) : *(str_iterator + position - initialBufferSize_ + 1);
 }
 
-MyString::const_iterator::const_iterator(const MyString *myString, size_t position) {
+MyString::const_iterator::const_iterator(const MyString *myString, size_t pos) {
+    c_str_begin = myString->buffer_;
+    str_iterator = myString->text_.begin();
 
+    position = pos;
 }
 
 MyString::const_iterator MyString::const_iterator::operator+(size_t pos) const {
-    return *this;
+    MyString::const_iterator newIterator = *this;
+    newIterator.position += pos;
+
+    return newIterator;
 }
 
 size_t MyString::const_iterator::operator-(MyString::const_iterator anotherIt) const {
-    return 0;
+    return position - anotherIt.position;
 }
 
 MyString::const_iterator &MyString::const_iterator::operator++() {
+    ++position;
     return *this;
 }
 
 MyString::const_iterator &MyString::const_iterator::operator--() {
+    --position;
     return *this;
 }
 
 bool MyString::const_iterator::operator==(MyString::const_iterator anotherIt) const {
-    return false;
+    return position== anotherIt.position && c_str_begin == anotherIt.c_str_begin && str_iterator == anotherIt.str_iterator;
 }
 
 bool MyString::const_iterator::operator!=(MyString::const_iterator anotherIt) const {
-    return false;
+    return !(*this == anotherIt);
 }
 
 char MyString::const_iterator::operator*() const {
-    return 0;
+    return position < initialBufferSize_ ? *(c_str_begin+position) : *(str_iterator + position - initialBufferSize_);
 }
-
