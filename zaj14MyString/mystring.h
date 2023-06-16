@@ -110,6 +110,7 @@ public:
     bool operator!=(const MyString& rhs) const;
 
     bool operator<(const MyString& rhs) const;
+    bool operator>(const MyString& rhs) const;
 
     friend std::ostream& operator<<(std::ostream& os, const MyString& obj);
     friend std::istringstream& operator>>(std::istringstream& is, MyString& obj);

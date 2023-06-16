@@ -87,19 +87,29 @@ std::set<MyString> MyString::getUniqueWords() const {
 
 std::map<MyString, size_t> MyString::countWordsUsageIgnoringCases() const {
     std::map<MyString, size_t> result;
-    std::istringstream ss(toString());
+    string text = toString();
 
-    string buff;
-    while (getline(ss, buff, ' ')) {
-        MyString word(buff.c_str());
-        result[word.toLower()]++;
+    std::string delims = " .,:;!?\n\t\"";
+    std::vector<std::string> tokens;
+
+    size_t start = text.find_first_not_of(delims), end = 0;
+    while ((end = text.find_first_of(delims, start)) != std::string::npos)
+    {
+        tokens.push_back(text.substr(start, end - start));
+        start = text.find_first_not_of(delims, end);
     }
+
+    if (start != std::string::npos)
+        tokens.push_back(text.substr(start));
+
+    for(const auto& token: tokens)
+        result[MyString(token.c_str()).toLower()]++;
 
     return result;
 }
 
 auto MyString::getPosition(size_t pos) const {
-
+    return 0;
 }
 
 static const char AlphaNumeric[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -144,7 +154,11 @@ char MyString::operator[](size_t i) const {
 }
 
 bool MyString::operator<(const MyString &rhs) const {
-    return false;
+    return toString() < rhs.toString();
+}
+
+bool MyString::operator>(const MyString &rhs) const {
+    return toString() > rhs.toString();
 }
 
 std::ostream& operator<<(std::ostream& os, const MyString& obj) {
