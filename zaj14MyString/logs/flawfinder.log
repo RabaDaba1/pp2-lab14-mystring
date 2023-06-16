@@ -1,0 +1,12 @@
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:19:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy(buffer_, text.buffer_);
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.h:128:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buffer_[initialBufferSize_] {};
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:27:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    memset(buffer_, 0, strlen(buffer_));
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:41:44:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    return toString().find(text) == size_- strlen(text);
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:168:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t text_size = strlen(newText);
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:170:5:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+    strncpy(buffer_, newText, initialBufferSize_-1);

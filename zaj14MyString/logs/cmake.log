@@ -1,0 +1,28 @@
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+Katalog do zbudowanego projektu: /tmp/tmp_jtf8k15/student/zaj14MyString/build
+ + Znaleziono nagłówki: /tmp/tmp_jtf8k15/student/zaj14MyString/mystring.h
+ + Znaleziono źródła: /tmp/tmp_jtf8k15/student/zaj14MyString/main.cpp;/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp
+ + Znaleziono źródła bez main.cpp: /tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp
+	* valgrind found: /usr/bin/valgrind
+-- Found Python: /tmp/tmpuz3vu058/teacher/test-venv/bin/python3 (found version "3.11.0") found components: Interpreter 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+ + Znaleziono pliki testów: /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp
+ + katalog nagłówków: 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmp_jtf8k15/student/zaj14MyString/build

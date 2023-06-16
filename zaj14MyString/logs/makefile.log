@@ -1,0 +1,299 @@
+[ 14%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-message.h:57,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-assertion-result.h:46,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:64,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:913:18: warning: ‘class testing::internal::RE’ has pointer data members [-Weffc++]
+  913 | class GTEST_API_ RE {
+      |                  ^~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:913:18: warning:   but does not declare ‘operator=(const testing::internal::RE&)’ [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:944:15: note: pointer member ‘testing::internal::RE::pattern_’ declared here
+  944 |   const char* pattern_;
+      |               ^~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h: In copy constructor ‘testing::internal::RE::RE(const testing::internal::RE&)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:917:3: warning: ‘testing::internal::RE::pattern_’ should be initialized in the member initialization list [-Weffc++]
+  917 |   RE(const RE& other) { Init(other.pattern()); }
+      |   ^~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:917:3: warning: ‘testing::internal::RE::is_valid_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:917:3: warning: ‘testing::internal::RE::full_regex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:917:3: warning: ‘testing::internal::RE::partial_regex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h: In constructor ‘testing::internal::RE::RE(const string&)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:920:3: warning: ‘testing::internal::RE::pattern_’ should be initialized in the member initialization list [-Weffc++]
+  920 |   RE(const ::std::string& regex) { Init(regex.c_str()); }  // NOLINT
+      |   ^~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:920:3: warning: ‘testing::internal::RE::is_valid_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:920:3: warning: ‘testing::internal::RE::full_regex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:920:3: warning: ‘testing::internal::RE::partial_regex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h: In constructor ‘testing::internal::RE::RE(const char*)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:922:3: warning: ‘testing::internal::RE::pattern_’ should be initialized in the member initialization list [-Weffc++]
+  922 |   RE(const char* regex) { Init(regex); }  // NOLINT
+      |   ^~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:922:3: warning: ‘testing::internal::RE::is_valid_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:922:3: warning: ‘testing::internal::RE::full_regex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:922:3: warning: ‘testing::internal::RE::partial_regex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h: In constructor ‘testing::internal::Notification::Notification()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:1237:3: warning: ‘testing::internal::Notification::mu_’ should be initialized in the member initialization list [-Weffc++]
+ 1237 |   Notification() : notified_(false) {}
+      |   ^~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-port.h:1237:3: warning: ‘testing::internal::Notification::cv_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-printers.h:115,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-matchers.h:48,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-death-test.h:43,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:65,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-internal.h: In constructor ‘testing::internal::TypedTestSuitePState::TypedTestSuitePState()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-internal.h:598:3: warning: ‘testing::internal::TypedTestSuitePState::registered_tests_’ should be initialized in the member initialization list [-Weffc++]
+  598 |   TypedTestSuitePState() : registered_(false) {}
+      |   ^~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:54,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-param-test.h:181,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:68,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-test-part.h: In constructor ‘testing::TestPartResultArray::TestPartResultArray()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-test-part.h:136:3: warning: ‘testing::TestPartResultArray::array_’ should be initialized in the member initialization list [-Weffc++]
+  136 |   TestPartResultArray() {}
+      |   ^~~~~~~~~~~~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-param-test.h:181,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:68,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h: In constructor ‘testing::internal::ParameterizedTestSuiteRegistry::ParameterizedTestSuiteRegistry()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:694:3: warning: ‘testing::internal::ParameterizedTestSuiteRegistry::test_suite_infos_’ should be initialized in the member initialization list [-Weffc++]
+  694 |   ParameterizedTestSuiteRegistry() {}
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:86,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:42:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h: In constructor ‘testing::internal::GTestFlagSaver::GTestFlagSaver()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::also_run_disabled_tests_’ should be initialized in the member initialization list [-Weffc++]
+  142 |   GTestFlagSaver() {
+      |   ^~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::break_on_failure_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::catch_exceptions_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::color_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::death_test_style_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::death_test_use_fork_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::fail_fast_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::filter_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::internal_run_death_test_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::list_tests_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::output_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::brief_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::print_time_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::print_utf8_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::random_seed_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::repeat_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::recreate_environments_when_repeating_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::shuffle_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::stack_trace_depth_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::stream_result_to_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:142:3: warning: ‘testing::internal::GTestFlagSaver::throw_on_failure_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:42:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc: At global scope:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:400:7: warning: ‘class testing::internal::DeathTestImpl’ has pointer data members [-Weffc++]
+  400 | class DeathTestImpl : public DeathTest {
+      |       ^~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:400:7: warning:   but does not declare ‘testing::internal::DeathTestImpl(const testing::internal::DeathTestImpl&)’ [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:400:7: warning:   or ‘operator=(const testing::internal::DeathTestImpl&)’ [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:441:21: note: pointer member ‘testing::internal::DeathTestImpl::statement_’ declared here
+  441 |   const char* const statement_;
+      |                     ^~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:1151:7: warning: ‘class testing::internal::ExecDeathTest’ has pointer data members [-Weffc++]
+ 1151 | class ExecDeathTest : public ForkingDeathTest {
+      |       ^~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:1151:7: warning:   but does not declare ‘testing::internal::ExecDeathTest(const testing::internal::ExecDeathTest&)’ [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:1151:7: warning:   or ‘operator=(const testing::internal::ExecDeathTest&)’ [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:1171:21: note: pointer member ‘testing::internal::ExecDeathTest::file_’ declared here
+ 1171 |   const char* const file_;
+      |                     ^~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc: In constructor ‘testing::internal::Arguments::Arguments()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:1179:3: warning: ‘testing::internal::Arguments::args_’ should be initialized in the member initialization list [-Weffc++]
+ 1179 |   Arguments() { args_.push_back(nullptr); }
+      |   ^~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:45:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-port.cc: In constructor ‘testing::internal::CapturedStream::CapturedStream(int)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-port.cc:1037:12: warning: ‘testing::internal::CapturedStream::filename_’ should be initialized in the member initialization list [-Weffc++]
+ 1037 |   explicit CapturedStream(int fd) : fd_(fd), uncaptured_fd_(dup(fd)) {
+      |            ^~~~~~~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:49:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: At global scope:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:448:54: warning: ‘operator=’ should return a reference to ‘*this’ [-Weffc++]
+  448 | void AssertHelper::operator=(const Message& message) const {
+      |                                                      ^~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::{anonymous}::UnitTestFilter::UnitTestFilter(const string&)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:753:12: warning: ‘testing::internal::{anonymous}::UnitTestFilter::glob_patterns_’ should be initialized in the member initialization list [-Weffc++]
+  753 |   explicit UnitTestFilter(const std::string& filter) {
+      |            ^~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:753:12: warning: ‘testing::internal::{anonymous}::UnitTestFilter::exact_match_patterns_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::{anonymous}::PositiveAndNegativeUnitTestFilter::PositiveAndNegativeUnitTestFilter(const string&)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:793:12: warning: ‘testing::internal::{anonymous}::PositiveAndNegativeUnitTestFilter::positive_filter_’ should be initialized in the member initialization list [-Weffc++]
+  793 |   explicit PositiveAndNegativeUnitTestFilter(const std::string& filter) {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::{anonymous}::UnitTestFilter::UnitTestFilter()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:750:3: warning: ‘testing::internal::{anonymous}::UnitTestFilter::glob_patterns_’ should be initialized in the member initialization list [-Weffc++]
+  750 |   UnitTestFilter() = default;
+      |   ^~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:750:3: warning: ‘testing::internal::{anonymous}::UnitTestFilter::exact_match_patterns_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::{anonymous}::PositiveAndNegativeUnitTestFilter::PositiveAndNegativeUnitTestFilter(const string&)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:793:12: warning: ‘testing::internal::{anonymous}::PositiveAndNegativeUnitTestFilter::negative_filter_’ should be initialized in the member initialization list [-Weffc++]
+  793 |   explicit PositiveAndNegativeUnitTestFilter(const std::string& filter) {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::ScopedFakeTestPartResultReporter::ScopedFakeTestPartResultReporter(testing::TestPartResultArray*)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:889:1: warning: ‘testing::ScopedFakeTestPartResultReporter::old_reporter_’ should be initialized in the member initialization list [-Weffc++]
+  889 | ScopedFakeTestPartResultReporter::ScopedFakeTestPartResultReporter(
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::ScopedFakeTestPartResultReporter::ScopedFakeTestPartResultReporter(testing::ScopedFakeTestPartResultReporter::InterceptMode, testing::TestPartResultArray*)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:898:1: warning: ‘testing::ScopedFakeTestPartResultReporter::old_reporter_’ should be initialized in the member initialization list [-Weffc++]
+  898 | ScopedFakeTestPartResultReporter::ScopedFakeTestPartResultReporter(
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::edit_distance::{anonymous}::InternalStrings::InternalStrings()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1350:7: warning: ‘testing::internal::edit_distance::{anonymous}::InternalStrings::ids_’ should be initialized in the member initialization list [-Weffc++]
+ 1350 | class InternalStrings {
+      |       ^~~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In function ‘std::vector<testing::internal::edit_distance::EditType> testing::internal::edit_distance::CalculateOptimalEdits(const std::vector<std::__cxx11::basic_string<char> >&, const std::vector<std::__cxx11::basic_string<char> >&)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1371:21: note: synthesized method ‘testing::internal::edit_distance::{anonymous}::InternalStrings::InternalStrings()’ first required here
+ 1371 |     InternalStrings intern_table;
+      |                     ^~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::edit_distance::{anonymous}::Hunk::Hunk(size_t, size_t)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1390:3: warning: ‘testing::internal::edit_distance::{anonymous}::Hunk::hunk_’ should be initialized in the member initialization list [-Weffc++]
+ 1390 |   Hunk(size_t left_start, size_t right_start)
+      |   ^~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1390:3: warning: ‘testing::internal::edit_distance::{anonymous}::Hunk::hunk_adds_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1390:3: warning: ‘testing::internal::edit_distance::{anonymous}::Hunk::hunk_removes_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::TestResult::TestResult()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:2235:1: warning: ‘testing::TestResult::test_properties_mutex_’ should be initialized in the member initialization list [-Weffc++]
+ 2235 | TestResult::TestResult()
+      | ^~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:2235:1: warning: ‘testing::TestResult::test_part_results_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:2235:1: warning: ‘testing::TestResult::test_properties_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::TestSuite::TestSuite(const char*, const char*, testing::internal::SetUpTestSuiteFunc, testing::internal::TearDownTestSuiteFunc)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:2938:1: warning: ‘testing::TestSuite::test_info_list_’ should be initialized in the member initialization list [-Weffc++]
+ 2938 | TestSuite::TestSuite(const char* a_name, const char* a_type_param,
+      | ^~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:2938:1: warning: ‘testing::TestSuite::test_indices_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:2938:1: warning: ‘testing::TestSuite::ad_hoc_test_result_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::TestEventRepeater::TestEventRepeater()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:3754:3: warning: ‘testing::internal::TestEventRepeater::listeners_’ should be initialized in the member initialization list [-Weffc++]
+ 3754 |   TestEventRepeater() : forwarding_enabled_(true) {}
+      |   ^~~~~~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::UnitTest::UnitTest()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5506:1: warning: ‘testing::UnitTest::mutex_’ should be initialized in the member initialization list [-Weffc++]
+ 5506 | UnitTest::UnitTest() { impl_ = new internal::UnitTestImpl(this); }
+      | ^~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5506:1: warning: ‘testing::UnitTest::impl_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::UnitTestImpl::UnitTestImpl(testing::UnitTest*)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::original_working_dir_’ should be initialized in the member initialization list [-Weffc++]
+ 5527 | UnitTestImpl::UnitTestImpl(UnitTest* parent)
+      | ^~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::global_test_part_result_reporter_mutex_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::environments_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::test_suites_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::test_suite_indices_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::type_parameterized_test_registry_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-param-test.h:181,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:68,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h: In constructor ‘testing::internal::TypeParameterizedTestSuiteRegistry::TypeParameterizedTestSuiteRegistry()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:761:7: warning: ‘testing::internal::TypeParameterizedTestSuiteRegistry::suites_’ should be initialized in the member initialization list [-Weffc++]
+  761 | class TypeParameterizedTestSuiteRegistry {
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:49:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In constructor ‘testing::internal::UnitTestImpl::UnitTestImpl(testing::UnitTest*)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5552:30: note: synthesized method ‘testing::internal::TypeParameterizedTestSuiteRegistry::TypeParameterizedTestSuiteRegistry()’ first required here
+ 5552 |       catch_exceptions_(false) {
+      |                              ^
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::ignored_parameterized_test_suites_’ should be initialized in the member initialization list [-Weffc++]
+ 5527 | UnitTestImpl::UnitTestImpl(UnitTest* parent)
+      | ^~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::listeners_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::internal_run_death_test_flag_’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:5527:1: warning: ‘testing::internal::UnitTestImpl::gtest_trace_stack_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-death-test.cc:86,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:42:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h: In constructor ‘testing::internal::TraceInfo::TraceInfo()’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:459:8: warning: ‘testing::internal::TraceInfo::file’ should be initialized in the member initialization list [-Weffc++]
+  459 | struct TraceInfo {
+      |        ^~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:459:8: warning: ‘testing::internal::TraceInfo::line’ should be initialized in the member initialization list [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-internal-inl.h:459:8: warning: ‘testing::internal::TraceInfo::message’ should be initialized in the member initialization list [-Weffc++]
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:49:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc: In member function ‘void testing::ScopedTrace::PushTrace(const char*, int, std::string)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:6831:23: note: synthesized method ‘testing::internal::TraceInfo::TraceInfo()’ first required here
+ 6831 |   internal::TraceInfo trace;
+      |                       ^~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:64,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-assertion-result.h: In instantiation of ‘testing::AssertionResult::AssertionResult(const T&, typename std::enable_if<(! std::is_convertible<T, testing::AssertionResult>::value)>::type*) [with T = bool; typename std::enable_if<(! std::is_convertible<T, testing::AssertionResult>::value)>::type = void]’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-assertion-result.cc:60:37:   required from here
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-assertion-result.h:155:12: warning: ‘testing::AssertionResult::message_’ should be initialized in the member initialization list [-Weffc++]
+  155 |   explicit AssertionResult(
+      |            ^~~~~~~~~~~~~~~
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-printers.h:115,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-matchers.h:48,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-death-test.h:43,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:65,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-internal.h: In instantiation of ‘testing::internal::FloatingPoint<RawType>::FloatingPoint(const RawType&) [with RawType = float]’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1669:32:   required from ‘testing::AssertionResult testing::internal::FloatingPointLE(const char*, const char*, RawType, RawType) [with RawType = float]’
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1698:42:   required from here
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-internal.h:294:12: warning: ‘testing::internal::FloatingPoint<float>::u_’ should be initialized in the member initialization list [-Weffc++]
+  294 |   explicit FloatingPoint(const RawType& x) { u_.value_ = x; }
+      |            ^~~~~~~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-internal.h: In instantiation of ‘testing::internal::FloatingPoint<RawType>::FloatingPoint(const RawType&) [with RawType = double]’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1669:32:   required from ‘testing::AssertionResult testing::internal::FloatingPointLE(const char*, const char*, RawType, RawType) [with RawType = double]’
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest.cc:1705:43:   required from here
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-internal.h:294:12: warning: ‘testing::internal::FloatingPoint<double>::u_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest-param-test.h:181,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/gtest.h:68,
+                 from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest-all.cc:38:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h: In instantiation of ‘class testing::internal::ValuesInIteratorRangeGenerator<bool>::Iterator’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:305:12:   required from ‘testing::internal::ParamIteratorInterface<T>* testing::internal::ValuesInIteratorRangeGenerator<T>::Begin() const [with T = bool]’
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:304:30:   required from here
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:314:9: warning: ‘class testing::internal::ValuesInIteratorRangeGenerator<bool>::Iterator’ has pointer data members [-Weffc++]
+  314 |   class Iterator : public ParamIteratorInterface<T> {
+      |         ^~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:314:9: warning:   but does not declare ‘operator=(const testing::internal::ValuesInIteratorRangeGenerator<bool>::Iterator&)’ [-Weffc++]
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:360:45: note: pointer member ‘testing::internal::ValuesInIteratorRangeGenerator<bool>::Iterator::base_’ declared here
+  360 |     const ParamGeneratorInterface<T>* const base_;
+      |                                             ^~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h: In instantiation of ‘testing::internal::ValuesInIteratorRangeGenerator<T>::Iterator::Iterator(const testing::internal::ParamGeneratorInterface<T>*, typename testing::internal::ValuesInIteratorRangeGenerator<T>::ContainerType::const_iterator) [with T = bool; typename testing::internal::ValuesInIteratorRangeGenerator<T>::ContainerType::const_iterator = std::vector<bool, std::allocator<bool> >::const_iterator; testing::internal::ValuesInIteratorRangeGenerator<T>::ContainerType = std::vector<bool, std::allocator<bool> >]’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:305:12:   required from ‘testing::internal::ParamIteratorInterface<T>* testing::internal::ValuesInIteratorRangeGenerator<T>::Begin() const [with T = bool]’
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:304:30:   required from here
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:316:5: warning: ‘testing::internal::ValuesInIteratorRangeGenerator<bool>::Iterator::value_’ should be initialized in the member initialization list [-Weffc++]
+  316 |     Iterator(const ParamGeneratorInterface<T>* base,
+      |     ^~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h: In instantiation of ‘testing::internal::ValuesInIteratorRangeGenerator<T>::Iterator::Iterator(const testing::internal::ValuesInIteratorRangeGenerator<T>::Iterator&) [with T = bool]’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:329:14:   required from ‘testing::internal::ParamIteratorInterface<T>* testing::internal::ValuesInIteratorRangeGenerator<T>::Iterator::Clone() const [with T = bool]’
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:328:32:   required from here
+/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/include/gtest/internal/gtest-param-util.h:353:5: warning: ‘testing::internal::ValuesInIteratorRangeGenerator<bool>::Iterator::value_’ should be initialized in the member initialization list [-Weffc++]
+  353 |     Iterator(const Iterator& other)
+      |     ^~~~~~~~
+[ 28%] Linking CXX static library ../../../lib/libgtest.a
+[ 28%] Built target gtest
+[ 42%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 57%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 57%] Built target gtest_main
+[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/myStringTests.cpp.o
+[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/mystring.cpp.o
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp: In member function ‘auto MyString::getPosition(size_t) const’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:101:35: warning: unused parameter ‘pos’ [-Wunused-parameter]
+  101 | auto MyString::getPosition(size_t pos) const {
+      |                            ~~~~~~~^~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp: In static member function ‘static MyString MyString::generateRandomWord(size_t)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:111:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  111 |     for(int m = 0; m < length; m++)
+      |                    ~~^~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp: In member function ‘bool MyString::operator<(const MyString&) const’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:146:42: warning: unused parameter ‘rhs’ [-Wunused-parameter]
+  146 | bool MyString::operator<(const MyString &rhs) const {
+      |                          ~~~~~~~~~~~~~~~~^~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp: In constructor ‘MyString::iterator::iterator(MyString*, size_t)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:183:1: warning: ‘MyString::iterator::str_iterator’ should be initialized in the member initialization list [-Weffc++]
+  183 | MyString::iterator::iterator(MyString *myString, size_t pos) {
+      | ^~~~~~~~
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp: In constructor ‘MyString::const_iterator::const_iterator(const MyString*, size_t)’:
+/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:223:1: warning: ‘MyString::const_iterator::str_iterator’ should be initialized in the member initialization list [-Weffc++]
+  223 | MyString::const_iterator::const_iterator(const MyString *myString, size_t pos) {
+      | ^~~~~~~~
+[100%] Linking CXX executable ../bin/unit_tests
+[100%] Built target unit_tests
