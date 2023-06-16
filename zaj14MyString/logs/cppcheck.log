@@ -1,39 +1,48 @@
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:185:5: warning: Variable 'str_iterator' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:199:5: warning: Variable 'str_iterator' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
     str_iterator = myString->text_.begin();
     ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:225:5: warning: Variable 'str_iterator' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:239:5: warning: Variable 'str_iterator' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
     str_iterator = myString->text_.begin();
     ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.h:19:5: warning: Class 'MyString' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.h:19:5: warning: Class 'MyString' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
     MyString(const char *text);
     ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:255:68: warning: Function parameter 'anotherIt' should be passed by const reference. [passedByValue]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:95:52: warning: Local variable 'end' shadows outer function [shadowFunction]
+    size_t start = text.find_first_not_of(delims), end = 0;
+                                                   ^
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.h:99:14: note: Shadowed declaration
+    iterator end() { return iterator(this , size_); }
+             ^
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:95:52: note: Shadow variable
+    size_t start = text.find_first_not_of(delims), end = 0;
+                                                   ^
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:269:68: warning: Function parameter 'anotherIt' should be passed by const reference. [passedByValue]
 bool MyString::const_iterator::operator!=(MyString::const_iterator anotherIt) const {
                                                                    ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:215:57: warning: Parameter 'other' can be declared as reference to const [constParameter]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:229:57: warning: Parameter 'other' can be declared as reference to const [constParameter]
 bool MyString::iterator::operator!=(MyString::iterator &other) {
                                                         ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:36:0: warning: The function 'startsWith' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:36:0: warning: The function 'startsWith' is never used. [unusedFunction]
 bool MyString::startsWith(const char *text) const {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:40:0: warning: The function 'endsWith' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:40:0: warning: The function 'endsWith' is never used. [unusedFunction]
 bool MyString::endsWith(const char *text) const {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:49:0: warning: The function 'join' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:49:0: warning: The function 'join' is never used. [unusedFunction]
 MyString MyString::join(const vector<MyString> &texts) const {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:66:0: warning: The function 'trim' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:66:0: warning: The function 'trim' is never used. [unusedFunction]
 MyString& MyString::trim() {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:77:0: warning: The function 'getUniqueWords' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:77:0: warning: The function 'getUniqueWords' is never used. [unusedFunction]
 std::set<MyString> MyString::getUniqueWords() const {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:88:0: warning: The function 'countWordsUsageIgnoringCases' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:88:0: warning: The function 'countWordsUsageIgnoringCases' is never used. [unusedFunction]
 std::map<MyString, size_t> MyString::countWordsUsageIgnoringCases() const {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:101:0: warning: The function 'getPosition' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:111:0: warning: The function 'getPosition' is never used. [unusedFunction]
 auto MyString::getPosition(size_t pos) const {
 ^
-/tmp/tmp_jtf8k15/student/zaj14MyString/mystring.cpp:109:0: warning: The function 'generateRandomWord' is never used. [unusedFunction]
+/tmp/tmpfobhf2ew/student/zaj14MyString/mystring.cpp:119:0: warning: The function 'generateRandomWord' is never used. [unusedFunction]
 MyString MyString::generateRandomWord(size_t length) {
 ^

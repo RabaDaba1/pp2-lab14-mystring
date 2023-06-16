@@ -1,14 +1,14 @@
 ==164== Memcheck, a memory error detector
 ==164== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==164== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==164== Command: /tmp/tmp_jtf8k15/student/zaj14MyString/build//bin/unit_tests
+==164== Command: /tmp/tmpfobhf2ew/student/zaj14MyString/build//bin/unit_tests
 ==164== 
-Running main() from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/googletest/src/gtest_main.cc
+Running main() from /tmp/tmpfobhf2ew/student/zaj14MyString/unit_tests/lib/googletest/src/gtest_main.cc
 [==========] Running 20 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 20 tests from MyStringTester
 [ RUN      ] MyStringTester.emptyStringConstruction_expectedSizeIsZero
-[       OK ] MyStringTester.emptyStringConstruction_expectedSizeIsZero (18 ms)
+[       OK ] MyStringTester.emptyStringConstruction_expectedSizeIsZero (17 ms)
 [ RUN      ] MyStringTester.constructionFromConstChar_expectedTextCopied
 [       OK ] MyStringTester.constructionFromConstChar_expectedTextCopied (4 ms)
 [ RUN      ] MyStringTester.clear_expectedEmptyStringAfterClearing
@@ -20,7 +20,7 @@ Running main() from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/google
 [ RUN      ] MyStringTester.ostreamOperator_readTextLongerThanBufferSize_expectedTextInStream
 [       OK ] MyStringTester.ostreamOperator_readTextLongerThanBufferSize_expectedTextInStream (2 ms)
 [ RUN      ] MyStringTester.indexAccessOperator_expectedPossibilityToAccesElementsWithIndex
-[       OK ] MyStringTester.indexAccessOperator_expectedPossibilityToAccesElementsWithIndex (38 ms)
+[       OK ] MyStringTester.indexAccessOperator_expectedPossibilityToAccesElementsWithIndex (37 ms)
 [ RUN      ] MyStringTester.istreamOperator_expectedTextCopiedFromStreamToString
 [       OK ] MyStringTester.istreamOperator_expectedTextCopiedFromStreamToString (5 ms)
 [ RUN      ] MyStringTester.trimming_expectedSpacesRemoved
@@ -28,53 +28,11 @@ Running main() from /tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/lib/google
 [ RUN      ] MyStringTester.operatorPlusEqual_expectedTextConcatenation
 [       OK ] MyStringTester.operatorPlusEqual_expectedTextConcatenation (6 ms)
 [ RUN      ] MyStringTester.countingUniqueWords
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:196: Failure
-Expected equality of these values:
-  expectedNumberOfWords
-    Which is: 21
-  uniqueWords.size()
-    Which is: 1
-[  FAILED  ] MyStringTester.countingUniqueWords (69 ms)
+[       OK ] MyStringTester.countingUniqueWords (27 ms)
 [ RUN      ] MyStringTester.countingWordsNumbersInText
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:256: Failure
-Expected equality of these values:
-  3
-  wordsUsage.at("zaczarowana")
-    Which is: 1447
-all words: 1
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:257: Failure
-Expected equality of these values:
-  6
-  wordsUsage.at("zaczarowany")
-    Which is: 1447
-all words: 1
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:258: Failure
-Expected equality of these values:
-  4
-  wordsUsage.at("kon")
-    Which is: 1447
-all words: 1
-[  FAILED  ] MyStringTester.countingWordsNumbersInText (73 ms)
+[       OK ] MyStringTester.countingWordsNumbersInText (56 ms)
 [ RUN      ] MyStringTester.countingWordsNumbersInTextIgnoringWordCases
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:302: Failure
-Expected equality of these values:
-  9
-  wordsUsage.at("krolowa")
-    Which is: 1284
-all words: 1
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:303: Failure
-Expected equality of these values:
-  16
-  wordsUsage.at("woznico")
-    Which is: 1284
-all words: 1
-/tmp/tmp_jtf8k15/student/zaj14MyString/unit_tests/myStringTests.cpp:304: Failure
-Expected equality of these values:
-  11
-  wordsUsage.at("krol")
-    Which is: 1284
-all words: 1
-[  FAILED  ] MyStringTester.countingWordsNumbersInTextIgnoringWordCases (37 ms)
+[       OK ] MyStringTester.countingWordsNumbersInTextIgnoringWordCases (34 ms)
 [ RUN      ] MyStringTester.wordsIntoLowerCase
 [       OK ] MyStringTester.wordsIntoLowerCase (3 ms)
 [ RUN      ] MyStringTester.randomWordGeneration
@@ -88,22 +46,16 @@ all words: 1
 [ RUN      ] MyStringTester.joiningContainer
 [       OK ] MyStringTester.joiningContainer (15 ms)
 [ RUN      ] MyStringTester.all_of
-[       OK ] MyStringTester.all_of (18 ms)
-[----------] 20 tests from MyStringTester (358 ms total)
+[       OK ] MyStringTester.all_of (17 ms)
+[----------] 20 tests from MyStringTester (291 ms total)
 
 [----------] Global test environment tear-down
-[==========] 20 tests from 1 test suite ran. (408 ms total)
-[  PASSED  ] 17 tests.
-[  FAILED  ] 3 tests, listed below:
-[  FAILED  ] MyStringTester.countingUniqueWords
-[  FAILED  ] MyStringTester.countingWordsNumbersInText
-[  FAILED  ] MyStringTester.countingWordsNumbersInTextIgnoringWordCases
-
- 3 FAILED TESTS
+[==========] 20 tests from 1 test suite ran. (341 ms total)
+[  PASSED  ] 20 tests.
 ==164== 
 ==164== HEAP SUMMARY:
 ==164==     in use at exit: 0 bytes in 0 blocks
-==164==   total heap usage: 836 allocs, 836 frees, 227,101 bytes allocated
+==164==   total heap usage: 842 allocs, 842 frees, 243,848 bytes allocated
 ==164== 
 ==164== All heap blocks were freed -- no leaks are possible
 ==164== 
